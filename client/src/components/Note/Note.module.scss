@@ -1,0 +1,44 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.messageContainer{
+  @include flex(center,center);
+  .checkbox{
+    appearance: none;
+    padding: 0.35rem;
+    background-color: $lightText;
+    border-radius: 50%;
+    &:checked{
+      background-color: $buttonSave;
+    }
+  }
+  .messageBody{
+    background-color: $inputBg;
+    border-radius: $borderRadius;
+    border-top-right-radius: 0;
+    margin: 0.45rem;
+    padding: 0.35rem 1rem 0.35rem 0.35rem;
+    width: 100%;
+    position: relative;
+    .message{
+      color: $lightText;
+    }
+    .untilDate{
+      @include text(0.85rem);
+    }
+    .icon{
+      width: 0.9rem;
+      position: absolute;
+      top: 0.3rem;
+      right: 0.3rem;
+    }
+  }
+  .doneMessage{
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
+  .doneStatus {
+    color: $buttonSave;
+    text-decoration: none;
+  }
+}

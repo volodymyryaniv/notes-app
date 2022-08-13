@@ -1,0 +1,27 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.container {
+  position: relative;
+  .iconsContainer {
+    height: 1rem;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    padding: 0.125rem;;
+    .icon{
+      height: 100%;
+      margin-left: 0.25rem;
+    }
+  }
+  .name{
+    display: inline-block;
+    @include text(1.3rem, 500);
+    margin: 0;
+    color: $lightText;
+  }
+  .email{
+    margin: 0 2.4rem 0 0.3rem;
+    color: rgb(190, 116, 30);
+  }
+}

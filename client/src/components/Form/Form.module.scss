@@ -1,0 +1,38 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+%input {
+  width: 100%;
+  background-color: $inputBg;
+  border-style: none;
+  border-radius: $borderRadius;
+  margin: 0.5rem 0 1rem;
+  padding: 0.5rem;
+  @include text(1rem, 500);
+}
+
+.form{
+  width: 100%;
+  .label{
+    @include text(1rem, 500);
+    color: $lightTextOpacity;
+    .input{
+      @extend %input;
+      color: $lightText;
+      &:focus-visible{
+        outline-color: $inputBg;
+      }
+    }
+  }
+  .button{
+    @extend %input;
+    @include text(1rem, 700);
+    color: $lightText;
+  }
+  .save{
+    background-color: $buttonSave;
+  }
+  .reset{
+    background-color: $buttonReset;
+  }
+}
